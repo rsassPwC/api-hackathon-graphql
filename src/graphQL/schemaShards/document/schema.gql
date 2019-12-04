@@ -1,0 +1,41 @@
+extend type Query {
+    documents: [Document],
+    documents(filter: String): [Document],
+    document(id: String): Document,
+}
+
+extend type Mutation {
+    addDocument(input: DocumentInput): Document,
+    addFile(input: FileInput): File
+}
+
+extend type Subscription {
+    documentAdded: Document,
+}
+
+input DocumentInput {
+  id: String
+  content: String
+  filetype: String
+  filename: String
+  client: String
+  tag: String
+}
+
+type Document {
+  id: String
+  content: String
+  filetype: String
+  filename: String
+  client: String
+  tag: String
+}
+
+input FileInput {
+  fileContent: String
+}
+
+type File {
+ fileContent:String
+ message:String
+}

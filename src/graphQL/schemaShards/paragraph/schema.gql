@@ -1,0 +1,27 @@
+extend type Query {
+    paragraphs: [Paragraph],
+    paragraphs(filter: String, includeSynoyms: Boolean): [Paragraph],
+    paragraph(id: String): Paragraph,
+}
+
+extend type Mutation {
+    addParagraph(input: ParagraphInput): Paragraph
+}
+
+extend type Subscription {
+    paragraphAdded: Paragraph
+}
+
+input ParagraphInput {
+    id: String
+    isPartOf: String
+    tag: String
+    content:String
+}
+
+type Paragraph {
+    id: String
+    isPartOf: String
+    tag: String
+    content: String
+}

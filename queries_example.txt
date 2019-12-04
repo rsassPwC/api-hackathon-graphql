@@ -1,0 +1,41 @@
+1. open: http://localhost:3000/graphql
+
+query {
+  documents(filter: "Strategie") {
+    id
+    filetype
+    client
+    content
+    filename
+  }
+}
+
+query {
+  document (id:"3") {
+    id
+    client
+    filename
+    content
+  }
+}
+
+
+query {
+  paragraph (id:"1") {
+    id
+    isPartOf
+    content
+  }
+}
+
+query {
+  paragraphs(filter: "Strategie") {
+    id
+    content
+    isPartOf
+    tag
+
+  }
+}
+
+
