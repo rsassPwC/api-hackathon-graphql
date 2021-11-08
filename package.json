@@ -14,7 +14,7 @@
   "author": "Martin Nigbur",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.8.1",
+    "apollo-server": "^2.25.3",
     "graphql": "^14.4.2",
     "graphql-subscriptions": "^1.1.0",
     "graphql-tools": "^4.0.5",
